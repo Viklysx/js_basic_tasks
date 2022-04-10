@@ -1,4 +1,4 @@
-const ancestry = require('./file_with_db.js');
+const ancestry = require('./ancestry.js');
 
 function average(array) {
     function plus(a, b) { return a + b; }
