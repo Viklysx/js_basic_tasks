@@ -1,30 +1,30 @@
 // Впишите свои регулярки
 
-verify(/'(car|cat)'/,
+verify(/(car|cat)/,
     ["my car", "bad cats"],
     ["camper", "high art"]);
 
-verify(/'pr?op'/,
+verify(/pr?op/,
     ["pop culture", "mad props"],
     ["plop"]);
 
-verify(/'ferr(et|y|ari)'/,
+verify(/ferr(et|y|ari)/,
     ["ferret", "ferry", "ferrari"],
     ["ferrum", "transfer A"]);
 
-verify(/\w'(ious)'\b/,
+verify(/\w(ious)\b/,
     ["how delicious", "spacious room"],
     ["ruinous", "consciousness"]);
 
-verify(/\s'.,(:|;)'/,
+verify(/\s[.,:;]/,
     ["bad punctuation ."],
     ["escape the dot"]);
 
-verify(/\w'{7,}'/,
+verify(/\w{7,}/,
     ["hottentottententen"],
     ["no", "hotten totten tenten"]);
 
-verify(/\w'[^e]'/,
+verify(/\b[^\We]+\b/,
     ["red platypus", "wobbling nest"],
     ["earth bed", "learning ape"]);
 
